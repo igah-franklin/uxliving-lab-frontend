@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --green-bg: hsla(102, 63%, 60%, 1);
+    --gray-bg:hsla(0, 0%, 77%, 1);
+    --deep-gray-bg:hsla(0, 0%, 51%, 1);
+    --red-color:hsla(0, 100%, 50%, 1);
+    --yellow-color: hsla(54, 100%, 56%, 1);
+    --box-shadow-default:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --white-color:#fff;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5rem;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+h2{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 1.5rem;
+text-transform: capitalize;
+}
+main{
+    height: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+/* reusable components */
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.padding_center{
+    padding: 1.5rem 1.5rem;
+}
+.container{
+    width: 900px;
+    margin: auto;
+}
+button{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+input{
+    outline: none;
+    border: 0;
+}
+#navbar{
+    height: 70px;
+    box-shadow: var(--box-shadow-default);
+    display: flex;
+    align-items: center;
+    
+}
+#navbar span{
+   
+}
+.hero_text{
+    text-align: center;
+    height: 100px;
+    background-color: var(--green-bg);
+    color: var(--white-color);
+    margin-top: 0.3rem;
+}
+.second_hero_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 170px;
+    text-align: center;
+}
+.second_hero_text h2{
+    padding-bottom: 1rem;
+}
+.stats{
+    display: flex;
+}
+
+.key_one{
+    height: 30px;
+    width: 30px;
+    background-color: var(--red-color);
+}
+.key_two{
+    height: 30px;
+    width: 30px;
+    background-color: var(--yellow-color);
+}
+.key_three{
+    height: 30px;
+    width: 30px;
+    background-color: var(--green-bg);
+}
+.key_one, .key_two,.key_three{
+    margin-right: 5px;
+
+}
+.key_content span{
+    font-size: 14px;
+}
+.key_cover{
+    height: auto;
+    background-color: var(--gray-bg);
+    margin: 0.3rem 0rem 0.3rem 0rem;
+    padding: 0.35rem 0.35rem;
+    justify-content: flex-start;
+}
+.stats_text h2{
+    text-align: center;
+    padding: 1rem 0rem 1rem 0rem;
+}
+.stats_key{
+    width: 50%;
+    height: auto;
+}
+.stats_graph{
+width: 50%;
+   height: 3rem;
+}
+.myChart{
+    height: 100%;
+    width: 100%;
+}
+.btns{
+    justify-content: space-between;
+}
+.btns #prev{
+    background-color: var(--deep-gray-bg);
+    padding: 1.2rem;
+    min-width: 140px;
+    color: var(--white-color);
+}
+.btns #create{
+    background-color: var(--green-bg);
+    padding: 1.2rem;
+    min-width: 140px;
+    color: var(--white-color);
+}
+/* @media(max-width:600px){
+    .stats_graph{
+        width: 50%;
+        height: 400px;
+        }
+} */
+
+/* style for pop up */
+.close_container{
+    justify-content: space-between;
+    padding: 1.2rem 0rem 1.2rem 0rem;
+}
+.disclaimer{
+    justify-content: space-around;
+    padding: 1.2rem 0rem 1.2rem 0rem;
+}
+.create_survey{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    width: 100%;
+    transform: translate(-50%, -50%) scale(0.1);
+    top: 10%;
+    left: 50%; 
+    background-color: var(--white-color);
+    width: 100%;
+    /* z-index: 999; */
+    position: absolute;
+    visibility: hidden;
+    transition: 0.5s ease-in-out;
+}
+.show_create_btn{
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1.0);
+    top: 50%;
+}
+.form_control_image input[type='image']{
+    border-radius: 50%;
+    background-color: var(--gray-bg);
+    height: 100px;
+    width: 100px;
+    outline: none;
+    border: none;
+
+}
+.form_control_image{
+  position: relative;
+}
+.form_control_image span{
+    position: absolute;
+}
+.form_control_image span i{
+    font-size: 1.5rem;
+   
+}
+.form_control input[type='text'], input[type='url'], textarea, select{
+    background-color: var(--gray-bg);
+    padding: 1.2rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-top: 0.9rem;
+    outline: none;
+}
+.form_control option{
+    max-width: 50%;
+}
+.form_control button{
+width: 100%;
+background-color: var(--green-bg);
+color: var(--white-color);
+padding: 1rem;
+}
+
+/* styles for create qr code */
+.qr_code_container{
+    border:5px solid var(--green-bg);
+    margin: 0rem 1rem 0rem 1rem;
+    color: var(--white-color);
+}
+.qr_code_preview{
+    
+}
+.qr_img{
+
+}
+.qr_imoji{
+    background-color: var(--green-bg);
+    width: 100%;
+    justify-content: space-around;
+    padding: 0rem 1rem 0rem 1rem;
+}
+.qr_imoji span img{
+    transform: translateY(2.5rem);
+}
+.qr_imoji span{
+  width: 50%;
+}
+.privacy_policy{
+    color: var(--red-color);
+    justify-content: space-around;
+    margin-top: 1.5rem;
+}
+/* .privacy_policy input[type='checkbox']{
+    background-color: red;
+} */
+.qr_footer_text{
+    background-color: var(--green-bg);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+}
+.qr_buttons{
+    justify-content: space-between;
+}
+.qr_buttons #qr_edit{
+    background-color: var(--deep-gray-bg);
+    color: var(--white-color);
+    /* min-width: 1rem; */
+    padding: 1rem;
+    width: 8rem;
+}
+.qr_buttons #qr_timeline{
+    background-color: var(--green-bg);
+    color: var(--white-color);
+    /* min-width: 3rem; */
+    padding: 1rem;
+}
+
+/* styles for survey date */
+.survey_date_title{
+    background-color: var(--green-bg);
+    padding: 2rem;
+    color: var(--white-color);
+    text-align: center;
+}
+#survey_date_container{
+    border-top: 1px solid var(--red-color);
+    border-bottom: 1px solid var(--red-color);
+    height: 400px;
+    margin-top: 0.2rem;
+}
+#survey_date_container h3{
+    text-align: center;
+    padding:2rem ;
+}
+.form_date_fields{
+    justify-content: space-between;
+}
+.form_control_date input[type='submit']{
+    padding: 1rem;
+    margin-top: 0.9rem;
+    min-width: 150px;
+    background-color: var(--gray-bg);
+    color: var(--white-color);
+    border-radius: 5px;
+}
