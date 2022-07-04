@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <main>
+        <header class="container">
+            <nav id="navbar">
+                <span class="padding_center"><i class="fa fa-bars"></i></span>
+            </nav>
+        </header>
+       
+        <!-- pop up section -->
+        <section class="create_qr_code">
+            <div class="form_survey_container padding_center">
+                <form action="">
+                    <div class="form_control close_container flex">
+                        <span id="qmark">
+                            ?
+                        </span>
+                        <span id="close"><i class="fa fa-close"></i></span>
+                    </div>
+                    <div class="form_control text-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quisquam ipsam voluptate debitis, quod voluptatibus perspic</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore rerum facere odit doloremque officiis? Culpa laudantium officia odit ab! Fuga.</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, quibusdam.</p>
+                    </div>
+                    <div class="form_control privacy">
+                        
+                        <input type="checkbox">
+                        <span>
+                            Privacy Policy
+                        </span>
+                    </div>
+                    <div class="form_control">
+                        <input type="text" placeholder=" your name" id="name">
+                    </div>
+                    <div class="form_control">
+                        <input type="email" placeholder=" your email" id="email">
+                    </div>
+                   
+                    <div class="form_control create_qr_code1 flex mt">
+                        <button id="back" type="submit">Back</button>
+                        <button id="submit" class="create_qr_code1_submit" type="submit">Submit</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+        <section class="survey_date_popup flex">
+            <div class="survey_date_popup_content flex">
+                <div class="survey_date_popup_close flex">
+                    <span id="survey-datestart-close">x</span>
+                </div>
+                <h4 class="padding_center items-center">QR code has bee sent <br>
+                    to given email address
+                </h4>
+                <img src="img/image 4.png" alt="">
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/qrcode1_script.js"></script>
+</body>
+</html>

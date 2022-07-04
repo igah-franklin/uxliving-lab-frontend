@@ -9,6 +9,9 @@
     --green-bg: hsla(102, 63%, 60%, 1);
     --gray-bg:hsla(0, 0%, 77%, 1);
     --deep-gray-bg:hsla(0, 0%, 51%, 1);
+    --pink-color:hsla(252, 53%, 56%, 1);
+    ;
+
     --red-color:hsla(0, 100%, 50%, 1);
     --yellow-color: hsla(54, 100%, 56%, 1);
     --box-shadow-default:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -42,6 +45,15 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.items-center{
+    text-align: center;
+}
+.pt{
+    padding-top: 1.5rem;
+}
+.mt{
+    margin-top: 1.5rem;
 }
 .padding_center{
     padding: 1.5rem 1.5rem;
@@ -190,6 +202,9 @@ width: 50%;
     transform: translate(-50%, -50%) scale(1.0);
     top: 50%;
 }
+#qmark{
+    color: var(--red-color);
+}
 .form_control_image input[type='image']{
     border-radius: 50%;
     background-color: var(--gray-bg);
@@ -209,7 +224,7 @@ width: 50%;
     font-size: 1.5rem;
    
 }
-.form_control input[type='text'], input[type='url'], textarea, select{
+.form_control input[type='text'],input[type='email'], input[type='url'], textarea, select{
     background-color: var(--gray-bg);
     padding: 1.2rem;
     width: 100%;
@@ -314,4 +329,74 @@ padding: 1rem;
     background-color: var(--gray-bg);
     color: var(--white-color);
     border-radius: 5px;
+}
+.form_control_date_1 input[type='submit']{
+    padding: 1rem;
+    margin-top: 0.9rem;
+    min-width: 150px;
+    background-color: var(--green-bg);
+    color: var(--white-color);
+    border-radius: 5px;
+}
+
+/* styling survey date */
+.form_date_fields{
+    justify-content: space-between;
+   
+}
+.form_date_fields small{
+    color: rgb(32, 32, 150);
+}
+.form_control_date input[type='date']{
+background-color: var(--gray-bg);
+padding: 1rem;
+border-radius: 10px;
+color: var(--white-color);
+}
+
+/* survey date_1 styling */
+.survey-datestart-btn button{
+    background-color: var(--pink-color);
+    color: var(--white-color);
+    padding: 1rem;
+}
+.survey_date_popup{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 70px;
+    z-index: 1;
+    background-color: rgba(0, 0,0, 0.1);
+    visibility: hidden;
+}
+.survey_date_popup_show{
+    visibility: visible;
+}
+.survey_date_popup_content{
+    flex-direction: column;
+    background-color: var(--white-color);
+    width: 300px;
+    border-radius: 10px;
+}
+.survey_date_popup_close{
+    position: relative;
+}
+.survey_date_popup_close span{
+   position: absolute;
+   left: 6.5rem;
+   top: 10px;
+   font-family: 25px;
+}
+
+/* create_qr_code1 styles */
+.create_qr_code p{
+    margin-top: 1rem;
+}
+.create_qr_code .privacy{
+    margin-top: 1rem;
+    color: var(--red-color);
+}
+.create_qr_code1 button:nth-child(1){
+    background-color: var(--deep-gray-bg);
+    margin-right: 0.4rem;
 }

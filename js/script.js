@@ -1,5 +1,5 @@
+'use strict'
 const ctx = document.getElementById('myChart').getContext('2d')
-
 const labels = [
     'January',
     'February',
@@ -43,3 +43,6 @@ const data = {
   closeBtn.addEventListener('click', function(){
     createSurvey.classList.remove('show_create_btn')
   })
+
+
+  

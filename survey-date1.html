@@ -37,28 +37,43 @@
                                 <input class="form-control" type="date" id="date-input" placeholder="select date">
                             </div>
                         </div>
+                        <div class="survey-datestart-btn padding_center">
+                            <button id="survey-date-start-btn">start now</button>
+                        </div>
                     </div>
                     
-                    <div class="form_control_date flex">
-                        <input type="submit">
+                    <div class="form_control_date_1 flex">
+                        <input type="submit" id="survey-date-submit-btn">
                     </div>
                 </form>
         </section>
+        <!-- survey date popup -->
+        <section class="survey_date_popup flex">
+            <div class="survey_date_popup_content flex">
+                <div class="survey_date_popup_close flex">
+                    <span id="survey-datestart-close">x</span>
+                </div>
+                <h4 class="padding_center items-center">start and end date of survey <br>
+                    has been set
+                </h4>
+                <img src="img/image 4.png" alt="">
+            </div>
+        </section>
     </main>
   
-<!-- <script src="script.js"></script>
+<script src="js/survey-script.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script>
-    const data = {
+    const dateData = {
     
-        altInput: true,
+    altInput: true,
     altFormat: "F j, Y",
     dateFormat: "Y-m-d",
     }
-  flatpickr("input[type=date]", data);
+  flatpickr("input[type=date]", dateData);
 </script>
 </body>
 </html>
